@@ -14,7 +14,7 @@ USER appuser
 FROM mcr.microsoft.com/dotnet/sdk:5.0-focal AS build
 WORKDIR /src
 COPY ["MSDemo.csproj", "./"]
-RUN dotnet restore "MSDemo/MSDemo.csproj"
+RUN dotnet restore "MSDemo.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "MSDemo.csproj" -c Release -o /app/build
