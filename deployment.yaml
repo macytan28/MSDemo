@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msdemo-deployment
+spec:
+  selector:
+    matchLabels:
+      app: msdemo-pod
+  template:
+    metadata:
+      labels:
+        app: msdemo-pod
+    spec:
+      containers:
+      - name: msdemo-container
+        image: sidlabacr03.azurecr.io/msdemo:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5000
