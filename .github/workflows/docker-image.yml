@@ -26,7 +26,7 @@ jobs:
         # Container registry server url
         login-server: sidlabacr03.azurecr.io
     - name: Push the Docker image
-      run: docker push inteltrainingacr02.azurecr.io/msdemo:latest
+      run: docker push sidlabacr03.azurecr.io/msdemo:latest
       
   deploy:
     runs-on: ubuntu-latest
