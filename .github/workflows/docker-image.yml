@@ -28,7 +28,7 @@ jobs:
     - name: Push the Docker image
       run: docker push sidlabacr03.azurecr.io/msdemo01:latest
       
-  name: Helm tool installer
+    - name: Helm tool installer
       uses: Azure/setup-helm@v1
       with:
         # Version of helm
